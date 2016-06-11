@@ -29,16 +29,12 @@ arr.push(tel06);
 console.log(arr);
 
 function resultado(fonos, marca) {
-	for (var i = 0; i < fonos.length; i++) {
-		if (fonos[i].marca == marca) {
-			result.push(fonos[i]);
-		}
-	}
-	/*fonos.filter(function () {
-		return fonos.marca == marca;
-	})*/
+	var filtro = fonos.filter(function(obj) {
+		return obj.marca == marca;
+	})
+	return filtro;
 }
 
-resultado(arr, "Apple");
+result = resultado(arr, "Apple");
 
 console.log(result);
